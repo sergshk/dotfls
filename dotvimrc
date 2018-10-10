@@ -1,0 +1,72 @@
+" No compatible with vi
+set nocompatible
+" Setting background to dark
+set background=dark
+set t_Co=256
+colorscheme slate
+" Turning on syntax higlighting
+syntax on
+" Setting windows title 
+set title
+" Do not display mode 
+set noshowmode
+" Higlight serach results
+set hlsearch
+" Set incremental search
+set incsearch
+" Setting tab to be 4 symbols
+set tabstop=4
+set shiftwidth=4
+" Turning off line wrapping
+set nowrap
+" Turning off replacing tabs with spaces
+set noexpandtab
+" Turning on line numbers
+set number
+" Setting autoindent
+set autoindent
+set smartindent
+" Setting current line/column however it's almost impossible to work in real life
+"set cursorcolumn cursorline
+":hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+":hi CursorColumn cterm=NONE ctermbg=grey ctermfg=white guibg=darkred guifg=white
+" Setting up diff to ignore whitespaces
+let VCSCommandSVNDiffOpt = 'w'
+" Same for vimdiff
+set diffopt+=iwhite
+" Setting up taglist
+nnoremap <silent> <leader>lt :TlistToggle<CR>
+nnoremap <silent> <leader>nt :NERDTreeToggle<CR>
+let Tlist_Show_One_File=1
+let Tlist_Sort_Type = "name"
+let Tlist_Exist_OnlyWindow=1
+let Tlist_Enable_Fold_Column=0
+let Tlist_File_Fold_Auto_Close=0
+let tlist_php_settings='php;c:class;d:constant;f:function'
+" Turning on omnicompletition
+filetype plugin on
+set ofu=syntaxcomplete#Complete 
+" Maping <Ctrl-L> for checking syntax with custom script
+:autocmd FileType php noremap <C-L> :Phpvl<CR>
+" Maping <Ctrl-M> for execution with custom script
+:autocmd FileType php noremap <C-M> :Phprs<CR>
+" Show line and column info
+set ruler
+" Setting up status line commented out in favor of airline
+"set statusline=%<%f%h%m%r\ %b\ %{&encoding}\ 0x\ \ %l,%c%V\ %P
+set laststatus=2
+"Display invisible characters
+"set listchars=tab:▸\ ,eol:¬
+"set list
+"Configuring syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
+"Config for airline
+let g:airline#extensions#tabline#enabled = 1
