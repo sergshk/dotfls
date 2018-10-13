@@ -43,6 +43,11 @@ let Tlist_Exist_OnlyWindow=1
 let Tlist_Enable_Fold_Column=0
 let Tlist_File_Fold_Auto_Close=0
 let tlist_php_settings='php;c:class;d:constant;f:function'
+" Make changes to PHP highlighting
+"let php_sql_query=1
+"let php_htmlInStrings=1
+"let php_baselib = 1
+"let php_noShortTags = 1
 " Turning on omnicompletition
 filetype plugin on
 set ofu=syntaxcomplete#Complete 
