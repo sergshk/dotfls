@@ -1,0 +1,6 @@
+set-window-option -g mode-keys vi
+set -g default-terminal "xterm-256color"
+new -s IonTec -n DOCKER
+send-keys -t DOCKER "cd ~/src/docker" C-m
+selectw -t 0
+attach -t IonTec 

@@ -1,0 +1,10 @@
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias tmux='tmux -2 a'
+# docker aliases
+alias dc-down='sudo docker-compose down'
+alias dc-up='sudo docker-compose up -d'
+alias dps='sudo docker ps'
+alias dcon='function _dcon(){ sudo docker exec -it $1 bash; };_dcon'

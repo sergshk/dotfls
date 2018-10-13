@@ -1,0 +1,5 @@
+{
+	"plugins":[
+		{"name":"nerdtree","url":"https://nerd","method":"wget"}
+	]
+}
