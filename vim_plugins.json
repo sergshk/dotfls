@@ -1,5 +1,9 @@
 {
 	"plugins":[
-		{"name":"nerdtree","url":"https://nerd","method":"wget"}
+		{"name":"taglist","url":"https://www.vim.org/scripts/download_script.php?src_id=19574","method":"wget","filename":"taglist_46.zip"},
+		{"name":"vcscommand.vim","url":"https://github.com/vim-scripts/vcscommand.vim.git","method":"git","filename":""},
+		{"name":"nerdtree","url":"https://github.com/scrooloose/nerdtree.git","method":"git","filename":""},
+		{"name":"syntastic","url":"https://github.com/vim-syntastic/syntastic.git","method":"git","filename":""},
+		{"name":"vim-airline","url":"https://github.com/vim-airline/vim-airline.git","method":"git","filename":""}
 	]
 }
