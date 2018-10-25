@@ -37,6 +37,9 @@ set diffopt+=iwhite
 " Setting up taglist
 nnoremap <silent> <leader>lt :TlistToggle<CR>
 nnoremap <silent> <leader>nt :NERDTreeToggle<CR>
+nnoremap <silent> <leader>sp :setlocal spell! spelllang=en_us<CR>
+nnoremap <silent> <leader>wr :set wrap!<CR>
+nnoremap <silent> <leader>sn :set nonumber!<CR>
 let Tlist_Show_One_File=1
 let Tlist_Sort_Type = "name"
 let Tlist_Exist_OnlyWindow=1
