@@ -8,8 +8,6 @@ colorscheme slate
 syntax on
 " Setting windows title 
 set title
-" Do not display mode 
-set noshowmode
 " Higlight serach results
 set hlsearch
 " Set incremental search
@@ -40,7 +38,7 @@ command! TagMe !ctags -R .
 let VCSCommandSVNDiffOpt = 'w'
 " Same for vimdiff
 set diffopt+=iwhite
-" Setting up extra keyboard shortcuts  
+" Setting up extra keyboard shortcuts 
 nnoremap <silent> <leader>lt :TlistToggle<CR>
 nnoremap <silent> <leader>nt :NERDTreeToggle<CR>
 nnoremap <silent> <leader>sp :setlocal spell! spelllang=en_us<CR>
@@ -76,15 +74,16 @@ set laststatus=2
 "Display invisible characters
 "set listchars=tab:▸\ ,eol:¬
 "set list
-"Configuring syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
-"Config for airline
-let g:airline#extensions#tabline#enabled = 1
+set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][Pos:%04l/%04v]
+"              | | | | |  |   |      |  |     |    |
+"              | | | | |  |   |      |  |     |    +-- current column
+"              | | | | |  |   |      |  |     +-- current line
+"              | | | | |  |   |      |  +-- current % into file
+"              | | | | |  |   |      +-- current syntax
+"              | | | | |  |   +-- current fileformat
+"              | | | | |  +-- number of lines
+"              | | | | +-- preview flag in square brackets
+"              | | | +-- help flag in square brackets
+"              | | +-- readonly flag in square brackets
+"              | +-- rodified flag in square brackets
+"              +-- full path to file in the buffer

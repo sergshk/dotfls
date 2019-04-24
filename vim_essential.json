@@ -1,0 +1,5 @@
+{
+	"plugins":[
+		{"name":"vcscommand.vim","url":"https://github.com/vim-scripts/vcscommand.vim.git","method":"git","filename":""}
+	]
+}
