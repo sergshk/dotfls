@@ -30,6 +30,7 @@ set path+=**
 set wildmenu
 " Adding commant to tag things now typing :TagMe will retag current project
 command! TagMe !ctags -R .
+command! TreeOpen 30vsp | edit .
 " Setting current line/column however it's almost impossible to work in real life
 "set cursorcolumn cursorline
 ":hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
@@ -40,7 +41,7 @@ let VCSCommandSVNDiffOpt = 'w'
 set diffopt+=iwhite
 " Setting up extra keyboard shortcuts 
 nnoremap <silent> <leader>lt :TlistToggle<CR>
-nnoremap <silent> <leader>nt :NERDTreeToggle<CR>
+nnoremap <silent> <leader>nt :TreeOpen<CR>
 nnoremap <silent> <leader>sp :setlocal spell! spelllang=en_us<CR>
 nnoremap <silent> <leader>wr :set wrap!<CR>
 nnoremap <silent> <leader>sn :set nonumber!<CR>
@@ -48,6 +49,7 @@ nnoremap <silent> <leader>kk :wincmd k<CR>
 nnoremap <silent> <leader>jj :wincmd j<CR>
 nnoremap <silent> <leader>hh :wincmd h<CR>
 nnoremap <silent> <leader>ll :wincmd l<CR>
+" Tweaks for browsing
 let g:netrw_banner=0        " disable annoying banner
 let g:netrw_browse_split=4  " open in prior window
 let g:netrw_altv=1          " open splits to the right
@@ -55,7 +57,7 @@ let g:netrw_liststyle=3     " tree view
 let g:netrw_list_hide=netrw_gitignore#Hide()
 let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
- Make changes to PHP highlighting
+" Make changes to PHP highlighting
 "let php_sql_query=1
 "let php_htmlInStrings=1
 "let php_baselib = 1
