@@ -48,13 +48,14 @@ nnoremap <silent> <leader>kk :wincmd k<CR>
 nnoremap <silent> <leader>jj :wincmd j<CR>
 nnoremap <silent> <leader>hh :wincmd h<CR>
 nnoremap <silent> <leader>ll :wincmd l<CR>
-let Tlist_Show_One_File=1
-let Tlist_Sort_Type = "name"
-let Tlist_Exist_OnlyWindow=1
-let Tlist_Enable_Fold_Column=0
-let Tlist_File_Fold_Auto_Close=0
-let tlist_php_settings='php;c:class;d:constant;f:function'
-" Make changes to PHP highlighting
+let g:netrw_banner=0        " disable annoying banner
+let g:netrw_browse_split=4  " open in prior window
+let g:netrw_altv=1          " open splits to the right
+let g:netrw_liststyle=3     " tree view
+let g:netrw_list_hide=netrw_gitignore#Hide()
+let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
+
+ Make changes to PHP highlighting
 "let php_sql_query=1
 "let php_htmlInStrings=1
 "let php_baselib = 1
